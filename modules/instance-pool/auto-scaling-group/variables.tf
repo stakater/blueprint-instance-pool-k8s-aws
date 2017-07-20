@@ -5,6 +5,11 @@ variable "name" {
   type = "string"
 }
 
+variable "kubernetes_cluster" {
+  description = "Cluster ID used for the KubernetesCluster tag"
+  type        = "string"
+}
+
 ## VPC parameters
 variable "subnets" {
   type = "string"

@@ -5,7 +5,8 @@ module "launch-configuration" {
   source = "./launch-configuration"
 
   ### Resource labels
-  name = "${var.name}-lc"
+  name               = "${var.name}-lc"
+  kubernetes_cluster = "${var.kubernetes_cluster}"
 
   ### VPC parameters
   vpc_id = "${var.vpc_id}"
@@ -47,7 +48,8 @@ module "auto-scaling-group" {
   source = "./auto-scaling-group"
 
   ### Resource tags
-  name = "${var.name}"
+  name               = "${var.name}"
+  kubernetes_cluster = "${var.kubernetes_cluster}"
 
   ### VPC parameters
   subnets = "${var.subnets}"

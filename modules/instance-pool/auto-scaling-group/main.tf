@@ -26,6 +26,12 @@ resource "aws_autoscaling_group" "asg" {
     value               = "${var.name}"
     propagate_at_launch = true
   }
+
+  tag {
+    key                 = "KubernetesCluster"
+    value               = "${var.kubernetes_cluster}"
+    propagate_at_launch = true
+  }
 }
 
 resource "aws_autoscaling_group" "asg_elb" {
@@ -53,6 +59,12 @@ resource "aws_autoscaling_group" "asg_elb" {
   tag {
     key                 = "Name"
     value               = "${var.name}"
+    propagate_at_launch = true
+  }
+
+  tag {
+    key                 = "KubernetesCluster"
+    value               = "${var.kubernetes_cluster}"
     propagate_at_launch = true
   }
 }

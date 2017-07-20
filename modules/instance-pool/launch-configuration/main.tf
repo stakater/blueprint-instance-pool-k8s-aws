@@ -4,8 +4,9 @@ resource "aws_security_group" "security_group" {
   vpc_id      = "${var.vpc_id}"
 
   tags {
-    Name       = "${var.name}-sg"
-    managed_by = "stakater"
+    Name              = "${var.name}-sg"
+    managed_by        = "stakater"
+    KubernetesCluster = "${var.kubernetes_cluster}"
   }
 
   lifecycle {

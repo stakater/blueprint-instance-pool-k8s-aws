@@ -6,6 +6,11 @@ variable "name" {
   description = "Identifier for this stack. This value is used to create the 'Name' resource tag for resources created by this stack item, and also serves as a unique key for re-use."
 }
 
+variable "kubernetes_cluster" {
+  description = "Cluster ID used for the KubernetesCluster tag"
+  type        = "string"
+}
+
 ## VPC parameters
 variable "vpc_id" {
   type        = "string"
