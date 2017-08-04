@@ -42,6 +42,7 @@ resource "aws_launch_configuration" "lc" {
   enable_monitoring           = "${var.enable_monitoring}"
   ebs_optimized               = "${var.ebs_optimized}"
   placement_tenancy           = "${var.placement_tenancy}"
+  spot_price                  = "${var.spot_price}"
 
   root_block_device {
     volume_type           = "${var.root_vol_type}"
@@ -70,6 +71,7 @@ resource "aws_launch_configuration" "lc_ebs_data" {
   enable_monitoring           = "${var.enable_monitoring}"
   ebs_optimized               = "${var.ebs_optimized}"
   placement_tenancy           = "${var.placement_tenancy}"
+  spot_price                  = "${var.spot_price}"
 
   root_block_device {
     volume_type           = "${var.root_vol_type}"
@@ -107,6 +109,7 @@ resource "aws_launch_configuration" "lc_ebs_data_logs" {
   enable_monitoring           = "${var.enable_monitoring}"
   ebs_optimized               = "${var.ebs_optimized}"
   placement_tenancy           = "${var.placement_tenancy}"
+  spot_price                  = "${var.spot_price}"
 
   root_block_device {
     volume_type           = "${var.root_vol_type}"

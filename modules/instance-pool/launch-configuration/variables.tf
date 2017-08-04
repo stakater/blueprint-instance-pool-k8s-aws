@@ -45,6 +45,10 @@ variable "placement_tenancy" {
   type = "string"
 }
 
+variable "spot_price" {
+  description = "The price to use for reserving spot instances"
+}
+
 variable "root_vol_type" {
   type = "string"
 }

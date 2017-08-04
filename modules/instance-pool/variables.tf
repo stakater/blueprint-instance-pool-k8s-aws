@@ -72,6 +72,11 @@ variable "placement_tenancy" {
   default     = "default"
 }
 
+variable "spot_price" {
+  type        = "string"
+  description = "The price to use for reserving spot instances"
+}
+
 variable "root_vol_type" {
   type        = "string"
   description = "The type of volume. Valid values are 'standard' or 'gp2'."
