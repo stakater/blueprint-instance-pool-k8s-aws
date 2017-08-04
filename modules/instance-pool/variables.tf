@@ -66,12 +66,6 @@ variable "ebs_optimized" {
   default     = false
 }
 
-variable "placement_tenancy" {
-  type        = "string"
-  description = "The tenancy of the instance. Valid values are 'default' or 'dedicated'."
-  default     = "default"
-}
-
 variable "spot_price" {
   type        = "string"
   description = "The price to use for reserving spot instances"
