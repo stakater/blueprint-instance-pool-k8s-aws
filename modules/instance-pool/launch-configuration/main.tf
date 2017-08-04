@@ -41,7 +41,6 @@ resource "aws_launch_configuration" "lc" {
   user_data                   = "${var.user_data}"
   enable_monitoring           = "${var.enable_monitoring}"
   ebs_optimized               = "${var.ebs_optimized}"
-  placement_tenancy           = "${var.placement_tenancy}"
   spot_price                  = "${var.spot_price}"
 
   root_block_device {
@@ -70,7 +69,6 @@ resource "aws_launch_configuration" "lc_ebs_data" {
   user_data                   = "${var.user_data}"
   enable_monitoring           = "${var.enable_monitoring}"
   ebs_optimized               = "${var.ebs_optimized}"
-  placement_tenancy           = "${var.placement_tenancy}"
   spot_price                  = "${var.spot_price}"
 
   root_block_device {
