@@ -36,7 +36,7 @@ resource "aws_autoscaling_group" "asg" {
   tag {
     key = "AlwaysOn"
     value = "Alwayson"
-    propagate_at_launch = false
+    propagate_at_launch = true
   }
 }
 
