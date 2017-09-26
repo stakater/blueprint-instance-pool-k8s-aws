@@ -3,6 +3,7 @@
 
 #### NOTE:
 This repository is a clone of https://github.com/stakater/blueprint-instance-pool-aws, with the only difference that resources in this repository contain a "KubernetesCluster" tag that is required by kubernetes, and "AlwaysOn" tag required by a specific nightwatcher so that it does not shut off the servers.
+
 Please make sure any change made in this repository is also reflected in the original repository i.e. `blueprint-instance-pool-aws`
 
 
