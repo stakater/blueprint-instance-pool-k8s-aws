@@ -69,7 +69,7 @@ variable "ebs_optimized" {
 variable "spot_price" {
   type        = "string"
   description = "The price to use for reserving spot instances, providing empty value will result in not using spot instances"
-  default = ""
+  default     = ""
 }
 
 variable "root_vol_type" {

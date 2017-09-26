@@ -34,8 +34,8 @@ resource "aws_autoscaling_group" "asg" {
   }
 
   tag {
-    key = "AlwaysOn"
-    value = "Alwayson"
+    key                 = "AlwaysOn"
+    value               = "Alwayson"
     propagate_at_launch = true
   }
 }
@@ -75,8 +75,8 @@ resource "aws_autoscaling_group" "asg_elb" {
   }
 
   tag {
-    key = "AlwaysOn"
-    value = "Alwayson"
+    key                 = "AlwaysOn"
+    value               = "Alwayson"
     propagate_at_launch = true
   }
 }
