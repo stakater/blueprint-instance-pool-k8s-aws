@@ -34,6 +34,12 @@ resource "aws_autoscaling_group" "asg" {
   }
 
   tag {
+    key                 = "spot-enabled"
+    value               = "${var.spot_enabled}"
+    propagate_at_launch = true
+  }
+
+  tag {
     key                 = "AlwaysOn"
     value               = "Alwayson"
     propagate_at_launch = true
@@ -71,6 +77,12 @@ resource "aws_autoscaling_group" "asg_elb" {
   tag {
     key                 = "KubernetesCluster"
     value               = "${var.kubernetes_cluster}"
+    propagate_at_launch = true
+  }
+
+  tag {
+    key                 = "spot-enabled"
+    value               = "${var.spot_enabled}"
     propagate_at_launch = true
   }
 

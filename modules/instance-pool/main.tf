@@ -50,6 +50,7 @@ module "auto-scaling-group" {
   ### Resource tags
   name               = "${var.name}"
   kubernetes_cluster = "${var.kubernetes_cluster}"
+  spot_enabled       = "${var.spot_enabled}"
 
   ### VPC parameters
   subnets = "${var.subnets}"

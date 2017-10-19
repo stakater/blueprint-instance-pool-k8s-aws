@@ -10,6 +10,11 @@ variable "kubernetes_cluster" {
   type        = "string"
 }
 
+variable "spot_enabled" {
+  description = "Tag for enabling or disabling autospotting"
+  default     = false
+}
+
 ## VPC parameters
 variable "subnets" {
   type = "string"
